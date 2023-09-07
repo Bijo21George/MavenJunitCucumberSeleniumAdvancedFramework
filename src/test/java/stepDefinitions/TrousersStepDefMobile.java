@@ -1,7 +1,7 @@
-/*
 package stepDefinitions;
 
 import PageFactoryClass.TrousersPageMobile;
+import Utilities.CommonFunctions;
 import Utilities.WebDriverManager;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
@@ -36,9 +36,15 @@ public class TrousersStepDefMobile extends BaseSteps {
         trousersPageMobile.selectAddToBag();
     }
 
-    @Then("GotoBag button is displayed")
-    public void gotobagButtonIsDisplayed() {
+    @And("User clicks on Done")
+    public void userClicksOnDone() {
+        trousersPageMobile.clickDone();
+    }
+
+    @Then("GotoBag button is selected")
+    public void gotobagButtonIsSelected() throws InterruptedException {
         trousersPageMobile.selectGoToBag();
     }
+
+
 }
-*/

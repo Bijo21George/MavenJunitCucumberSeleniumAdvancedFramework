@@ -2,6 +2,7 @@ package stepDefinitions;
 
 //import PageFactoryClass.HomePageMobile;
 
+import Utilities.CommonFunctions;
 import Utilities.ConfigReader;
 import Utilities.WebDriverManager;
 import io.cucumber.java.Before;
@@ -26,12 +27,9 @@ public class HomePageStepDefMobile extends BaseSteps {
     }
 
     @When("User selects Men")
-    public void userSelectsMen() {
-        try {
-            Thread.sleep(10000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+    public void userSelectsMen()  {
         homePageMobile.menPage();
     }
+
+
 }

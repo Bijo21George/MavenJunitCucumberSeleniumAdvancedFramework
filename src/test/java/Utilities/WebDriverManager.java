@@ -3,11 +3,10 @@ package Utilities;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 
 public class WebDriverManager {
     private static WebDriver webDriver;
-    private static AppiumDriver<MobileElement> mobileDriver;
+    private static AppiumDriver mobileDriver;
 
     public static WebDriver getWebDriver() {
         return webDriver;

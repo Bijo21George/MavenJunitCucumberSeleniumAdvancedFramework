@@ -3,7 +3,6 @@ package TestRunner;
 import Utilities.ConfigReader;
 import Utilities.WebDriverManager;
 import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
@@ -38,7 +37,7 @@ public class Runner {
             caps.setCapability("appPackage",ConfigReader.config().getProperty("AppPackage"));
             caps.setCapability("appActivity",ConfigReader.config().getProperty("AppActivity"));
             try {
-                WebDriverManager.setAndroidDriver(new AppiumDriver<MobileElement>(new URL("http://0.0.0.0:4723/wd/hub"),caps));
+                WebDriverManager.setAndroidDriver(new AppiumDriver(new URL("http://0.0.0.0:4723/wd/hub"),caps));
             } catch (MalformedURLException e) {
                 throw new RuntimeException(e);
             }

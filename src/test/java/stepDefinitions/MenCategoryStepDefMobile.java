@@ -1,4 +1,4 @@
-/*
+
 package stepDefinitions;
 
 import PageFactoryClass.MenCategoryMobile;
@@ -26,4 +26,3 @@ public class MenCategoryStepDefMobile extends BaseSteps{
         menCategoryMobile.clickOnTrousers();
     }
 }
-*/
